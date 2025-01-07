@@ -73,3 +73,19 @@
 html {
   scroll-behavior: smooth;
 }
+
+.mouse-glow {
+  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(54,195,255,0.15), transparent 80%);
+}
+
+[data-mouse-x] {
+  --mouse-x: attr(data-mouse-x);
+}
+
+[data-mouse-y] {
+  --mouse-y: attr(data-mouse-y);
+}
+
+.delayed-pulse {
+  animation-delay: 1s;
+}

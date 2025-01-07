@@ -37,9 +37,7 @@ const Features = () => {
         <div className="absolute inset-0 overflow-hidden">
           {/* Gradient Orbs */}
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl animate-pulse" 
-            style={{ animationDelay: '1s' }}
-          />
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl animate-pulse delayed-pulse" />
           
           {/* Subtle Grid */}
           <div 
@@ -49,6 +47,20 @@ const Features = () => {
               backgroundSize: '40px 40px'
             }}
           />
+
+          {[...Array(15)].map((_, i) => (
+            <motion.div
+              key={`particle-${i}`}
+              className="absolute rounded-full bg-cyan-400/30 blur-sm"
+              style={{
+                width: Math.random() * 4 + 2 + 'px',
+                height: Math.random() * 4 + 2 + 'px',
+                left: Math.random() * 100 + '%',
+                top: Math.random() * 100 + '%'
+              }}
+              // ...
+            />
+          ))}
         </div>
 
         {/* Content */}

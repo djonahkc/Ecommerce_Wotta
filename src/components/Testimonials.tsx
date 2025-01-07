@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { useMouseGlow } from './MicroInteractions';
 import Section from './Section';
@@ -129,10 +128,9 @@ const Testimonials = () => {
 
         {/* Mouse follow effect */}
         <div 
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: `radial-gradient(circle at ${mouseX}px ${mouseY}px, rgba(54,195,255,0.15), transparent 80%)`,
-          }}
+          className="absolute inset-0 pointer-events-none mouse-glow"
+          data-mouse-x={`${mouseX}px`}
+          data-mouse-y={`${mouseY}px`}
         />
       </div>
     </Section>
