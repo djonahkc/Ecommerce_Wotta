@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Droplets, Battery, Thermometer, Smartphone } from 'lucide-react';
 import Section from './Section';

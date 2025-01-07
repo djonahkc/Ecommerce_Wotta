@@ -8,7 +8,6 @@ import TechSpecs from './components/TechSpecs';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
-import CustomCursor from './components/CustomCursor';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +25,6 @@ function App() {
         ) : (
           <>
             <Navbar />
-            <CustomCursor />
             <main className="relative">
               <Hero />
               <Features />

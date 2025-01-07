@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, Droplets, Zap, ThermometerSun } from 'lucide-react';
+import { useState } from 'react';
 import { useMouseGlow } from './MicroInteractions';
 import Section from './Section';
 
+type ColorType = 'cyan' | 'purple' | 'gold';
+
 const ProductShowcase = () => {
   const { mouseX, mouseY, handleMouseMove } = useMouseGlow();
-  const [activeColor, setActiveColor] = useState<'cyan' | 'purple' | 'gold'>('cyan');
+  const [activeColor, setActiveColor] = useState<ColorType>('cyan');
 
   const colors = {
     cyan: 'from-cyan-500 to-blue-600',
