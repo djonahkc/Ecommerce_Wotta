@@ -1,4 +1,3 @@
-import React from 'react';
 import { Droplets, Instagram, Twitter, Facebook } from 'lucide-react';
 
 const Footer = () => {
